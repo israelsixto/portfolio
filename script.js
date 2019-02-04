@@ -1,3 +1,3 @@
-$('.nav li').click(function(){
-    $(this).addClass('active').siblings().removeClass('active');
-})
+$('.uiButton').unbind('click').click(function() {
+    $(this).attr('class', 'uiButton-active');
+  });

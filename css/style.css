@@ -97,4 +97,12 @@ footer {
 
 ::selection {
     background: #f2e5e4; /* WebKit/Blink Browsers */
-  }
+}
+
+.uiButton {
+    background-color: red;
+ }
+ 
+ .uiButton-active, .uiButton:hover {
+    background-color: blue;
+ }
