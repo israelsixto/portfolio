@@ -1,0 +1,100 @@
+/* ORIGINAL CSS */
+
+/* LOADED FONTS */
+@font-face {
+    font-family: 'Apercu';
+    src:    url('/css/fonts/Apercu-Light.woff2') format('woff2'),
+            url('/css/fonts/Apercu-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Mono';
+    src:    url('/css/fonts/Apercu-Mono.woff2') format('woff2'),
+            url('/css/fonts/Apercu-Mono.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src:    url('/css/fonts/Sailec-Bold.woff2') format('woff2'),
+            url('/css/fonts/Sailec-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+}
+
+@font-face {
+    font-family: 'Untitled Sans';
+    src:    url('/css/fonts/UntitledSansTest-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+.sub-header {
+    font-family: 'Apercu Mono', monospace, sans-serif;
+    color: #6d6d6d;
+}
+
+.main-header {
+    font-family: 'Sailec', Helvetica, sans-serif;
+    font-size: 3em;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+}
+
+nav a {
+    font-family: 'Untitled Sans', monospace, sans-serif;
+    text-decoration: none;
+    color: #ed174c;
+    float: right;
+    padding: 15px;
+    display: block;
+}
+
+nav a:hover:not(.active) {background-color: #f2e5e4;}
+
+nav a.active {background-color: #ed174c; color: white;}
+
+main {
+    display: block;
+    margin: 18%;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #ed174c; 
+}
+
+/* For Internet Explorer */
+* html #footer {
+    position:absolute;
+}
+
+.tiny-text {
+    font-size: 10px;
+}
+
+/* Interactive CSS */
+
+::selection {
+    background: #f2e5e4; /* WebKit/Blink Browsers */
+  }
