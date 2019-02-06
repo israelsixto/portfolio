@@ -1,4 +1,7 @@
 /* ORIGINAL CSS */
+* {
+    box-sizing: border-box;
+}
 /* LOADED FONTS */
 @font-face {
     font-family: 'Apercu';
@@ -7,7 +10,6 @@
             font-weight: 300;
             font-style: normal;
 }
-
 @font-face {
     font-family: 'Apercu Mono';
     src:    url('/css/fonts/Apercu-Mono.woff2') format('woff2'),
@@ -15,7 +17,6 @@
             font-weight: normal;
             font-style: normal;
 }
-
 @font-face {
     font-family: 'Sailec';
     src:    url('/css/fonts/Sailec-Bold.woff2') format('woff2'),
@@ -23,7 +24,6 @@
             font-weight: bold;
             font-style: normal;
 }
-
 @font-face {
     font-family: 'Untitled Sans';
     src:    url('/css/fonts/UntitledSansTest-Regular.woff') format('woff');
@@ -31,7 +31,10 @@
             font-style: normal;
 }
 
-html { font-size: 1em; }
+html { 
+    font-size: 1em; 
+    scroll-behavior: smooth;
+}
 
 body { margin: 0; }
 
@@ -39,6 +42,86 @@ main {
     display: block;
     margin: 18%;
 }
+
+nav {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* sticky boi */
+    position: fixed;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.90);
+
+}
+
+nav > div.container {
+    display: flex;
+    flex-direction: row;
+    padding: 2% 0 2% 0;
+    justify-content: space-between;
+}
+
+nav > div.container > a {
+    text-decoration: none;
+    width: 33.33%;
+    text-align: center;
+    font-size: 5vw;
+    color: #ed174c;
+    font-family: 'Apercu Mono', monospace, sans-serif;
+}
+
+hr {
+    height: 1vw;
+    width: 33.33%;
+    margin: 0;
+    margin-left: 0%;
+    background: #ed174c;
+    border: none;
+    transition: .3s ease-in-out;
+}
+
+nav > div.container > a.active { 
+    color: #ed174c;
+    transition: .3s ease-in-out;
+}
+
+/*
+nav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* sticky
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+nav a {
+    font-family: 'Apercu Mono', monospace, sans-serif;
+    font-size: 1em;
+    color: #ed174c;
+    text-decoration: none;
+    list-style: none;
+    display: block;
+    padding: 2% 6% 2% 6%;
+    text-align: center;
+}
+
+nav a:hover:not(.active) {background-color: #f2e5e4;}
+
+nav a.active {background-color: #ed174c; color: #fff;}
+
+/* made changes here and in nav a selector just change it to this in the device view instead */
+
 
 .main-header {
     font-family: 'Sailec', Helvetica, sans-serif;
@@ -75,97 +158,56 @@ section.work {
     overflow: hidden;
 }
 
-/* NAV */
-
-nav {
-    margin: 0;
-    padding: 0em;
-    overflow: hidden;
-
-    /* sticky */
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-
-nav a {
-    font-family: 'Apercu Mono', monospace, sans-serif;
-    color: #ed174c;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.75);
-    float: right;
-    display: block;
-    padding: 2%;
-    text-align: center;
-}
-
-nav a:hover:not(.active) {background-color: #f2e5e4;}
-
-nav a.active {background-color: #ed174c; color: #fff;}
-
 /* SMARTPHONES PORTRAIT */
 @media only screen and (min-width: 300px) {
-    body {
-        background-color:#fff;
-    }
 
-    .main-header {
-        font-size: 2em;
-    }
-        
-    .sub-header {
-        font-size: 1em;
-        line-height: 1em;
-    }
-    
-    .info-header {
-        font-size: 2.75em;
-    }
-
-    .info-sub-header {
-        line-height: 2em;
-    }
 
 }
 
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) {
-    body {
-        background-color: white;
-    }
+
 
 }
 
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) {
-    body {
-        background-color: white;
+
+    nav {
+        width: 50%;
+        margin-left: 50%;
+
+        border-left: #ed174c solid 1px;
+        border-bottom: #ed174c solid 1px;
+    }
+
+    nav > div.container > a {
+        font-size: 3vw;
+    }
+
+    hr {
+        height: 1vw;
     }
 
 }
 
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 1024px) {
-    body {
-        background-color: white;
+
+    nav {
+        width: 30%;
+        margin-left: 70%;
+
+        border-left: #ed174c solid 1px;
+        border-bottom: #ed174c solid 1px;
     }
 
-    .main-header {
-        font-size: 3em;
-    }
-        
-    .sub-header {
-        font-size: 1.2em;
-        line-height: 1em;
-    }
-    
-    .info-header {
-        font-size: 2.75em;
+    nav > div.container > a {
+        font-size: 1.5vw;
     }
 
-    .info-sub-header {
-        line-height: 2em;
+    hr {
+        height: 0.5vw;
     }
 
 }
@@ -222,6 +264,7 @@ footer {
 
 footer p {
     margin-left: 18%;
+    margin-right: 18%;
     font-family: "Apercu";
     font-size: 0.80em;
     color: #fff;
@@ -231,3 +274,9 @@ footer p {
 ::selection {
     background: #f2e5e4;
 }
+
+#work {
+    color: transparent;
+}
+
+/* RESPONSIVE FONTS */
