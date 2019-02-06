@@ -1,6 +1,8 @@
 /* ORIGINAL CSS */
 * {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 /* LOADED FONTS */
 @font-face {
@@ -90,39 +92,6 @@ nav > div.container > a.active {
     transition: .3s ease-in-out;
 }
 
-/*
-nav {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.85);
-    /* sticky
-    position: fixed;
-    top: 0;
-    left:0;
-    right:0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-}
-nav a {
-    font-family: 'Apercu Mono', monospace, sans-serif;
-    font-size: 1em;
-    color: #ed174c;
-    text-decoration: none;
-    list-style: none;
-    display: block;
-    padding: 2% 6% 2% 6%;
-    text-align: center;
-}
-
-nav a:hover:not(.active) {background-color: #f2e5e4;}
-
-nav a.active {background-color: #ed174c; color: #fff;}
-
-/* made changes here and in nav a selector just change it to this in the device view instead */
-
-
 .main-header {
     font-family: 'Sailec', Helvetica, sans-serif;
     font-size: 3em;
@@ -158,15 +127,102 @@ section.work {
     overflow: hidden;
 }
 
+
+
+
 /* SMARTPHONES PORTRAIT */
 @media only screen and (min-width: 300px) {
 
+    nav {
+        border-bottom: #ed174c solid 1px;
+    }
+
+    nav > div.container > a {
+        font-size: 4vw;
+    }
+
+    hr {
+        height: 0.75vw;
+    }
+
+    main {
+        margin: 13%;
+        padding-top: 5%;
+    }
+
+    section.information {
+        margin: 13%;
+    }
+    
+    section.work {
+        margin: 13%;
+    }
+
+    .main-header {
+        font-size: 2em;
+    }
+
+    .sub-header {
+        font-size: .80em;
+        line-height: 1.5em;
+    }
+
+    .info-header {
+        font-size: 1.60em;
+    }
+    
+    .info-sub-header {
+        font-size: .80em;
+        line-height: 2em;
+    }
 
 }
 
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) {
+    nav {
+        border-bottom: #ed174c solid 1px;
+    }
 
+    nav > div.container > a {
+        font-size: 4vw;
+    }
+
+    hr {
+        height: 0.75vw;
+    }
+
+
+    main {
+        margin: 13%;
+        padding-top: 5%;
+    }
+
+    section.information {
+        margin: 13%;
+    }
+    
+    section.work {
+        margin: 13%;
+    }
+
+    .main-header {
+        font-size: 3em;
+    }
+
+    .sub-header {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .info-header {
+        font-size: 2.1em;
+    }
+    
+    .info-sub-header {
+        font-size: 1em;
+        line-height: 1.75em;
+    }
 
 }
 
@@ -174,19 +230,52 @@ section.work {
 @media only screen and (min-width: 768px) {
 
     nav {
-        width: 50%;
-        margin-left: 50%;
+        width: 40%;
+        margin-left: 60%;
 
         border-left: #ed174c solid 1px;
         border-bottom: #ed174c solid 1px;
     }
 
     nav > div.container > a {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 
     hr {
-        height: 1vw;
+        height: 0.75vw;
+    }
+
+    main {
+        margin: 18%;
+        padding-top: 10%;
+    }
+
+    section.information {
+        margin: 18%;
+        margin-right: 25%;
+
+    }
+    
+    section.work {
+        margin: 18%;
+    }
+
+    .main-header {
+        font-size: 2.5em;
+    }
+
+    .sub-header {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .info-header {
+        font-size: 2em;
+    }
+    
+    .info-sub-header {
+        font-size: 1em;
+        line-height: 2.5em;
     }
 
 }
@@ -210,9 +299,44 @@ section.work {
         height: 0.5vw;
     }
 
+
+    main {
+        margin: 18%;
+        padding-top: 0;
+    }
+
+    section.information {
+        margin: 18%;
+        margin-right: 25%;
+
+    }
+    
+    section.work {
+        margin: 18%;
+    }
+
+    .main-header {
+        font-size: 3em;
+    }
+
+    .sub-header {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .info-header {
+        font-size: 2.5em;
+    }
+    
+    .info-sub-header {
+        font-size: 1em;
+        line-height: 2em;
+    }
+
 }
 
 /* ANIMATED ANCHORS */
+
 
 .animated-links a {
     font-family: "Apercu Mono", monospace, sans-serif;
@@ -220,9 +344,12 @@ section.work {
     position: relative;
     color: #ed174c;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 0 0 .2em 0;
     line-height: 1em;
+    margin-right: 4%;
 }
 
 .animated-links a:hover {
@@ -250,10 +377,6 @@ section.work {
     transform: scaleX(1);
 }
 
-.animated-links span {
-    padding: 1em;
-}
-
 /* FOOTER */
 
 footer {
@@ -265,7 +388,11 @@ footer {
 footer p {
     margin-left: 18%;
     margin-right: 18%;
-    font-family: "Apercu";
+}
+
+
+.footer-style {
+    font-family: "Apercu", monospace, sans-serif;
     font-size: 0.80em;
     color: #fff;
 }
@@ -280,3 +407,69 @@ footer p {
 }
 
 /* RESPONSIVE FONTS */
+
+/* -------------------------------------------------------------- */
+
+section.work {
+    background-color: #ed174c;
+    margin:0;
+    margin-top: 30%;
+}
+
+.card-slider {
+    background-color: beige;
+    padding: 2%;
+}
+
+.cards {
+    background-color: darkblue;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2px;
+}
+
+
+.card {
+    width: 250px;
+    min-height: 400px;
+    margin: 1%;
+    background-color: lightblue;
+    position: relative;
+}
+
+.card-header {
+    position: absolute;
+    background-color: lightcoral;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+/*
+section.work div.card-slider {
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    width: 100%;
+    white-space: nowrap;
+    margin:0;
+  }
+  
+  section.work div.card-slider {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }

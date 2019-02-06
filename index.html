@@ -6,10 +6,11 @@
     <meta name="author" content="israelsixto">
     <meta name="description" content="portfoliö">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="/portfolio/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Israel Sixto</title>
-    <script src="/portfolio/script.js"></script>
+    <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <!-- scripts -->
 
 </head>
@@ -24,7 +25,7 @@
             <a class="active" id="one" href="#work" onclick="base=work; jump('work')" onmouseover="chmg(work)" onmouseout="chmg(base)">work</a>
             <a class="inactive" id="two" href="#about" onclick="base=about; jump('about')" onmouseover="chmg(about)"
                 onmouseout="chmg(base)">about</a>
-            <a class="inactive" id="three" href="#resume" onclick="base=resume; jump('resume')" onmouseover="chmg(resume)"
+            <a class="inactive" id="three" href="files/israelsixtoresume.pdf" target="_blank" onmouseover="chmg(resume)"
                 onmouseout="chmg(base)">resume</a>
         </div>
         <hr id="slider" />
@@ -32,39 +33,94 @@
 
     <!-- INTRO -->
     <main>
-        <h1 class="main-header">Israel Sixto-Sanchez</h1>
+        <h1 class="main-header" id="card-slider">Israel Sixto-Sanchez</h1>
         <p class="sub-header">Informatics. HCI. University of Washington '20.</p>
         <p class="sub-header">UX & Motion design. Cartoonist when I got time.</p>
     </main>
+
+
     <!-- WORK -->
     <section class="work">
-        <p class="sub-header">Selected Works</p>
+        <p class="sub-header">Projects</p>
+        <br/>
+
+
+        <div class="card-slider">
+            <div class="cards">
+
+                <a class="card" href="#">
+                    <span class="card-header" style="background-image: url();">
+                        Published: June 18th, 2015
+                    </span>
+                </a>
+
+                <a class="card" href="#">
+                    <span class="card-header" style="background-image: url();">
+                    <span class="card-meta">
+                        Published: June 18th, 2015
+                    </span>
+                </a>
+
+
+                <a class="card" href="#">
+                    <span class="card-header" style="background-image: url();">
+                    <span class="card-meta">
+                        Published: June 18th, 2015
+                    </span>
+                </a>
+
+
+                <a class="card" href="#">
+                    <span class="card-header" style="background-image: url();">
+                    <span class="card-meta">
+                        Published: June 18th, 2015
+                    </span>
+                </a>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </section>
     <!-- INFO -->
     <section class="information" id="about">
+        <p class="sub-header">Information</p>
         <h2 class="info-header">
-            Hi, I'm Israel. UX designer</br>based out of Seattle.
+            Hi there! I'm Israel, <br/> UX / Motion designer based in Seattle.
         </h2>
         <p class="info-sub-header">
             Creativity and technology are at the heart of everything I do.
 
-            From a young age, I encouraged myself to be creative. This led me to sketch, handle creative software, and
+            From a young age, I encouraged myself to be creative. This led me to sketch, learn creative software, and
             develop a passion for learning through art and design. I have always been interested in meeting individuals
             with unique stories and diverse backgrounds. An interest which has matured throughout my life and which I
-            deliberately apply to my professional career.
+            deliberately apply to my professional career. hell yes.
         </p>
+        <br/>
         <div class="animated-links">
             <a href="https://instagram.com/sixtoisr">Instagram</a>
-            <span></span>
             <a href="https://github.com/israelsixto">GitHub</a>
-            <span></span>
             <a href="https://behance.net/israelsixto">Behance</a>
-            <span></span>
             <a href="http://dnaseattle.com/blog/2018/08/dna-uw-diversity-scholarship-intern-israel-sixto/">DNA</a>
         </div>
     </section>
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer-style">
         <p>Copyright &copy; 2019 Israel Sixto-Sanchez</p>
         </div>
     </footer>
@@ -84,7 +140,7 @@
             window.scrollTo(0, top);
         })
 
-    </script>
+</script>
 
 </body>
 
